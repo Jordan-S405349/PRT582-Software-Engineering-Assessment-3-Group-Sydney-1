@@ -1,0 +1,5 @@
+Method,Name,Error,Occurrences,First Seen,Last Seen
+POST,POST login,RemoteDisconnected('Remote end closed connection without response'),11,2026-10-12T01:44:46Z,2026-10-12T01:44:50Z
+GET,GET my bookings,RemoteDisconnected('Remote end closed connection without response'),1,2026-10-12T01:44:50Z,2026-10-12T01:44:50Z
+GET,GET search,RemoteDisconnected('Remote end closed connection without response'),3,2026-10-12T01:44:46Z,2026-10-12T01:44:49Z
+GET,GET my bookings,HTTPError('500 Server Error: Internal Server Error for url: GET my bookings'),138,2026-10-12T01:44:49Z,2026-10-12T01:47:42Z

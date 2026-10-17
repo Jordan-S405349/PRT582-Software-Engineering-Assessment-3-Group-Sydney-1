@@ -1,0 +1,6 @@
+Method,Name,Error,Occurrences,First Seen,Last Seen
+GET,GET home / movie list,"ConnectionRefusedError(10061, '[WinError 10061] No connection could be made because the target machine actively refused it.')",8,2026-10-16T20:04:41Z,2026-10-16T20:05:29Z
+GET,GET search,"ConnectionRefusedError(10061, '[WinError 10061] No connection could be made because the target machine actively refused it.')",3,2026-10-16T20:04:49Z,2026-10-16T20:05:16Z
+GET,GET my bookings,"ConnectionRefusedError(10061, '[WinError 10061] No connection could be made because the target machine actively refused it.')",1,2026-10-16T20:04:45Z,2026-10-16T20:04:45Z
+POST,POST login,"ConnectionRefusedError(10061, '[WinError 10061] No connection could be made because the target machine actively refused it.')",1,2026-10-16T20:04:39Z,2026-10-16T20:04:39Z
+GET,GET login page,"ConnectionRefusedError(10061, '[WinError 10061] No connection could be made because the target machine actively refused it.')",1,2026-10-16T20:04:37Z,2026-10-16T20:04:37Z

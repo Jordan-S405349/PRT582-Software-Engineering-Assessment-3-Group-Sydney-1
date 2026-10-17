@@ -1,0 +1,15 @@
+SEC-02 | FAIL | logged-out visit to /booking/ returned HTTP 500 instead of redirecting to login
+SEC-03 | PASS | 4 injection payloads in search: no server error or database error shown
+SEC-04 | PASS | search text is reflected but HTML-escaped (shown as text, not run)
+SEC-05 | PASS | POST without CSRF token rejected with 403 (token in form: True, cookie: True)
+SEC-07 | FAIL | 15 wrong passwords in a row, no lockout or rate limit (HTTP codes seen: [200])
+SEC-08 | INFO | could not log in with TEST_USER / TEST_PASS - register the account first
+SEC-09 | FAIL | unknown URL shows the Django debug page (DEBUG = True), exposing settings and URL patterns
+SEC-09 | FAIL | the 500 error page shows a stack trace
+SEC-10 | PASS | X-Frame-Options: SAMEORIGIN
+SEC-10 | FAIL | X-Content-Type-Options: MISSING
+SEC-10 | FAIL | Content-Security-Policy: MISSING
+SEC-10 | FAIL | Strict-Transport-Security: MISSING
+SEC-10 | FAIL | Referrer-Policy: MISSING
+SEC-11 | INFO | Django not installed here - run: pip show django   (in the app's environment)
+SEC-12 | FAIL | /admin/login/ returned HTTP 200 - admin login is reachable on the default path

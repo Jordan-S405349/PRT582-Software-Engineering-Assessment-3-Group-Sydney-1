@@ -1,0 +1,5 @@
+Method,Name,Error,Occurrences,First Seen,Last Seen
+GET,GET home / movie list,RemoteDisconnected('Remote end closed connection without response'),2,2026-10-12T01:50:49Z,2026-10-12T01:50:49Z
+POST,POST login,RemoteDisconnected('Remote end closed connection without response'),95,2026-10-12T01:50:48Z,2026-10-12T01:50:52Z
+GET,GET my bookings,RemoteDisconnected('Remote end closed connection without response'),2,2026-10-12T01:50:49Z,2026-10-12T01:50:49Z
+GET,GET my bookings,HTTPError('500 Server Error: Internal Server Error for url: GET my bookings'),1667,2026-10-12T01:50:48Z,2026-10-12T01:53:46Z

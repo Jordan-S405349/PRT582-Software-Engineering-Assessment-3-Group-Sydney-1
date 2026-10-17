@@ -1,0 +1,2 @@
+run this: 
+locust -f locustfile.py --host http://127.0.0.1:8000 --headless -u 1 -r 1 -t 2m --csv results/baseline --html results/baseline.html

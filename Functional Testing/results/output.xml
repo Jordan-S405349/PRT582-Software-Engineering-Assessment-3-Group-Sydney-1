@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.11.4 on win32)" generated="2026-10-17T19:10:20.418812" rpa="false" schemaversion="5">
+<suite id="s1" name="Functional" source="C:\Users\Acer\Documents\University\SOFTWARE ENGINEERING\online-movie-ticket-booking-system-master\Functional Testing\functional.robot">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2026-10-17T19:10:21.391192" level="INFO">Opening browser 'edge' to base url 'http://127.0.0.1:8000'.</msg>
+<arg>${BASE}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-17T19:10:21.390191" elapsed="11.863916"/>
+</kw>
+<test id="s1-t1" name="F1 View Movie List" line="28">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-10-17T19:10:33.257075" level="INFO">Opening url 'http://127.0.0.1:8000'</msg>
+<arg>${BASE}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-10-17T19:10:33.256486" elapsed="0.072083"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-10-17T19:10:33.838516" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-10-17T19:10:33.839044" level="FAIL">Page should have contained text 'Name of a movie in your data' but did not.</msg>
+<arg>${MOVIE}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2026-10-17T19:10:33.329563" elapsed="0.516486">Page should have contained text 'Name of a movie in your data' but did not.</status>
+</kw>
+<kw name="Run Keyword If Test Failed" owner="BuiltIn" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-10-17T19:10:34.283378" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-10-17T19:10:33.849035" elapsed="0.434343"/>
+</kw>
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2026-10-17T19:10:33.847049" elapsed="0.436329"/>
+</kw>
+<status status="FAIL" start="2026-10-17T19:10:33.254785" elapsed="1.029588">Page should have contained text 'Name of a movie in your data' but did not.</status>
+</test>
+<test id="s1-t2" name="F2 Search For Existing Movie" line="32">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-10-17T19:10:34.288897" level="INFO">Opening url 'http://127.0.0.1:8000'</msg>
+<arg>${BASE}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-10-17T19:10:34.287372" elapsed="0.133916"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-17T19:10:34.424283" level="INFO">Typing text 'Name of a movie in your data' into text field 'name:q'.</msg>
+<arg>${SEARCH_FIELD}</arg>
+<arg>${MOVIE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-17T19:10:34.423280" elapsed="0.229572"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2026-10-17T19:10:34.655793" level="INFO">Sending key(s) ('RETURN',) to name:q element.</msg>
+<msg time="2026-10-17T19:10:35.023395" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2026-10-17T19:10:35.023395" level="INFO">Releasing special key RETURN.</msg>
+<arg>${SEARCH_FIELD}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2026-10-17T19:10:34.654720" elapsed="0.484293"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-10-17T19:10:35.160014" level="INFO">Current page contains text 'Name of a movie in your data'.</msg>
+<arg>${MOVIE}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-10-17T19:10:35.140005" elapsed="0.020009"/>
+</kw>
+<kw name="Run Keyword If Test Failed" owner="BuiltIn" type="TEARDOWN">
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2026-10-17T19:10:35.161008" elapsed="0.002002"/>
+</kw>
+<status status="PASS" start="2026-10-17T19:10:34.286368" elapsed="0.876642"/>
+</test>
+<test id="s1-t3" name="F3 Search With No Match" line="38">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-10-17T19:10:35.167009" level="INFO">Opening url 'http://127.0.0.1:8000'</msg>
+<arg>${BASE}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-10-17T19:10:35.167009" elapsed="0.096686"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-17T19:10:35.265681" level="INFO">Typing text 'zzzz no such movie zzzz' into text field 'name:q'.</msg>
+<arg>${SEARCH_FIELD}</arg>
+<arg>zzzz no such movie zzzz</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-17T19:10:35.264685" elapsed="0.191298"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2026-10-17T19:10:35.457981" level="INFO">Sending key(s) ('RETURN',) to name:q element.</msg>
+<msg time="2026-10-17T19:10:35.757380" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2026-10-17T19:10:35.757380" level="INFO">Releasing special key RETURN.</msg>
+<arg>${SEARCH_FIELD}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2026-10-17T19:10:35.456983" elapsed="0.422217"/>
+</kw>
+<kw name="Page Should Not Contain" owner="SeleniumLibrary">
+<msg time="2026-10-17T19:10:35.934700" level="INFO">Current page does not contain text 'Name of a movie in your data'.</msg>
+<arg>${MOVIE}</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<status status="PASS" start="2026-10-17T19:10:35.880178" elapsed="0.054522"/>
+</kw>
+<kw name="Page Should Not Contain" owner="SeleniumLibrary">
+<msg time="2026-10-17T19:10:35.975701" level="INFO">Current page does not contain text 'Server Error'.</msg>
+<arg>Server Error</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<status status="PASS" start="2026-10-17T19:10:35.935711" elapsed="0.039990"/>
+</kw>
+<kw name="Run Keyword If Test Failed" owner="BuiltIn" type="TEARDOWN">
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2026-10-17T19:10:35.976702" elapsed="0.001015"/>
+</kw>
+<status status="PASS" start="2026-10-17T19:10:35.165015" elapsed="0.813703"/>
+</test>
+<test id="s1-t4" name="F4 Weak Password Is Rejected" line="45">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2026-10-17T19:10:35.982724" level="INFO">${stamp} = 191035</msg>
+<var>${stamp}</var>
+<arg>result_format=%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2026-10-17T19:10:35.981718" elapsed="0.001006"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-10-17T19:10:35.983723" level="INFO">Opening url 'http://127.0.0.1:8000/register/'</msg>
+<arg>${REGISTER_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-10-17T19:10:35.983723" elapsed="0.126065"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-17T19:10:36.111788" level="INFO">Typing text 'weakuser191035' into text field 'name:username'.</msg>
+<msg time="2026-10-17T19:10:36.266632" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-10-17T19:10:36.266632" level="FAIL">Element with locator 'name:username' not found.</msg>
+<arg>${USER_FIELD}</arg>
+<arg>weakuser${stamp}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2026-10-17T19:10:36.110788" elapsed="0.164696">Element with locator 'name:username' not found.</status>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<arg>${PASS_FIELD}</arg>
+<arg>${WEAK_PASS}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-10-17T19:10:36.276487" elapsed="0.000000"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<arg>${PASS2_FIELD}</arg>
+<arg>${WEAK_PASS}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-10-17T19:10:36.277514" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${REGISTER_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-10-17T19:10:36.278514" elapsed="0.000000"/>
+</kw>
+<kw name="Location Should Contain" owner="SeleniumLibrary">
+<arg>register</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<status status="NOT RUN" start="2026-10-17T19:10:36.279510" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If Test Failed" owner="BuiltIn" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-10-17T19:10:36.367058" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-10-17T19:10:36.281511" elapsed="0.085547"/>
+</kw>
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2026-10-17T19:10:36.280508" elapsed="0.087548"/>
+</kw>
+<doc>Expected to FAIL: the site accepts weak passwords (SEC-01).</doc>
+<status status="FAIL" start="2026-10-17T19:10:35.980724" elapsed="0.387332">Element with locator 'name:username' not found.</status>
+</test>
+<test id="s1-t5" name="F5 Logout Removes Access" line="55">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-10-17T19:10:36.372057" level="INFO">Opening url 'http://127.0.0.1:8000/login/'</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-10-17T19:10:36.372057" elapsed="0.132373"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-17T19:10:36.506431" level="INFO">Typing text 'testuser' into text field 'name:username'.</msg>
+<msg time="2026-10-17T19:10:36.670747" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-10-17T19:10:36.671750" level="FAIL">Element with locator 'name:username' not found.</msg>
+<arg>${USER_FIELD}</arg>
+<arg>${USER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2026-10-17T19:10:36.505427" elapsed="0.169319">Element with locator 'name:username' not found.</status>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<arg>${PASS_FIELD}</arg>
+<arg>${PASS}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-10-17T19:10:36.676748" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-10-17T19:10:36.677770" elapsed="0.000000"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<arg>${LOGOUT_LINK}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-10-17T19:10:36.678769" elapsed="0.000000"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${BOOKINGS_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2026-10-17T19:10:36.679506" elapsed="0.000000"/>
+</kw>
+<kw name="Page Should Not Contain Link" owner="SeleniumLibrary">
+<arg>${LOGOUT_LINK}</arg>
+<doc>Verifies link identified by ``locator`` is not found from current page.</doc>
+<status status="NOT RUN" start="2026-10-17T19:10:36.680528" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If Test Failed" owner="BuiltIn" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-10-17T19:10:36.785284" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-10-17T19:10:36.684527" elapsed="0.100757"/>
+</kw>
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2026-10-17T19:10:36.681529" elapsed="0.103755"/>
+</kw>
+<status status="FAIL" start="2026-10-17T19:10:36.370059" elapsed="0.416234">Element with locator 'name:username' not found.</status>
+</test>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-10-17T19:10:36.791781" elapsed="2.278830"/>
+</kw>
+<status status="FAIL" start="2026-10-17T19:10:20.419812" elapsed="18.650799"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Functional" id="s1" pass="2" fail="3" skip="0">Functional</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
